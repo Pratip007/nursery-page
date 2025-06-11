@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Plants - GreenSpace Nursery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#2D5A27',
+                        'light-green': '#6BA644',
+                        'accent-green': '#9BCF53',
+                        'soft-green': '#E8F5E8',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter text-gray-800 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-white/20 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-5 flex justify-between items-center h-[70px]">
+            <div class="flex items-center">
+                <h2 class="text-primary-green font-bold text-2xl">
+                    <i class="fas fa-seedling text-light-green mr-2"></i>
+                    GreenSpace
+                </h2>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="outdoor-plants.html" class="text-primary-green font-medium relative group">
+                    Outdoor Plants
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-light-green"></span>
+                </a></li>
+                <li><a href="indoor-plants.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
+                    Indoor Plants
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+            </ul>
+            <div class="flex items-center space-x-6">
+                <!-- <i class="fas fa-search text-xl text-gray-800 hover:text-primary-green cursor-pointer transition-colors duration-300"></i> -->
+            </div>
+            <div class="md:hidden flex flex-col cursor-pointer">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-soft-green to-white">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <h1 class="text-5xl font-bold text-gray-800 mb-6">Outdoor Plants</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover our beautiful selection of outdoor plants perfect for your garden, patio, and landscape. From flowering shrubs to majestic trees, find the perfect additions to your outdoor space.</p>
+        </div>
+    </section>
+
+    <!-- All Outdoor Plants Gallery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+        
+            <!-- Plants Container -->
+            <div id="plantsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Plants will be loaded here dynamically -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="bg-light-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-green transition-colors duration-300">
+                    Load More Plants
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Preview Modal -->
+    <div id="imagePreviewModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all duration-300 z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-4">
+                <img id="previewImage" src="" alt="" class="max-w-full max-h-[70vh] object-contain mx-auto">
+                <div class="mt-4 text-center">
+                    <h3 id="previewTitle" class="text-xl font-semibold text-gray-800 mb-2"></h3>
+                    <p id="previewDescription" class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-seedling text-light-green mr-2"></i>
+                        GreenSpace
+                    </h3>
+                    <p class="text-gray-400 mb-4">Your trusted partner in creating beautiful, thriving gardens and outdoor spaces.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="nursery-website.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="outdoor-plants.html" class="text-gray-400 hover:text-white transition-colors duration-300">Outdoor Plants</a></li>
+                        <li><a href="indoor-plants.html" class="text-gray-400 hover:text-white transition-colors duration-300">Indoor Plants</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Trees</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Flowering Shrubs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Ground Cover</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Garden Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope mr-2"></i> hello@greenspace.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Garden St, Plant City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2024 GreenSpace Nursery. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nursery-script.js"></script>
+    <script src="outdoor-plants.js"></script>
+</body>
+</html> 
