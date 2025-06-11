@@ -3,8 +3,8 @@
 // Image folder path
 const IMAGE_FOLDER = 'images/indoor-plants/';
 
-// Generate array of image numbers (1 to 20)
-const indoorPlantImages = Array.from({length: 20}, (_, i) => (i + 1).toString());
+// Generate array of image numbers (1 to 12)
+const indoorPlantImages = Array.from({length: 12}, (_, i) => (i + 1).toString());
 
 // DOM Elements
 const plantsContainer = document.getElementById('plantsContainer');
@@ -25,7 +25,16 @@ let isLoading = false;
 
 // Get optimized image URL
 function getOptimizedImageUrl(imageNumber) {
-    return `${IMAGE_FOLDER}${imageNumber}.jpg`;
+    // Check for jpg first, then webp as fallback
+    const jpgUrl = `${IMAGE_FOLDER}${imageNumber}.jpg`;
+    const webpUrl = `${IMAGE_FOLDER}${imageNumber}.webp`;
+    
+    // For image 3, we know it's webp
+    if (imageNumber === '3') {
+        return webpUrl;
+    }
+    
+    return jpgUrl;
 }
 
 // Create plant card HTML with only photos
@@ -180,9 +189,8 @@ function loadMorePlants() {
 
 // Aggressive preloading for faster experience
 function preloadCriticalImages() {
-    // Preload first 12 images immediately
-    const criticalImages = indoorPlantImages.slice(0, 12);
-    criticalImages.forEach(imageNumber => {
+    // Preload all images immediately since we only have 12
+    indoorPlantImages.forEach(imageNumber => {
         const img = new Image();
         img.src = getOptimizedImageUrl(imageNumber);
     });
