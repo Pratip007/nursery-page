@@ -1,6 +1,7 @@
 // Nursery Website JavaScript
 
-// Hero Slider Functionality
+
+// Hero Slider Functionality with Optimized Loading
 class HeroSlider {
     constructor() {
         this.currentSlide = 0;
@@ -27,10 +28,10 @@ class HeroSlider {
             this.rightClickArea.addEventListener('click', () => this.nextSlide());
         }
         
-        // Start auto-sliding
-        this.startAutoSlide();
+        // Start auto-sliding after initial load
+        setTimeout(() => this.startAutoSlide(), 500);
         
-       
+        
     }
     
     updateSlider() {
@@ -56,7 +57,7 @@ class HeroSlider {
         this.stopAutoSlide(); // Clear any existing interval
         this.autoSlideInterval = setInterval(() => {
             this.nextSlide();
-        }, 3000); // Change slide every 3 seconds
+        }, 3000); // Auto-slide every 4 seconds
     }
     
     stopAutoSlide() {
@@ -183,6 +184,9 @@ class PlantScrollLoader {
             'Spider Plant', 'Boston Fern', 'Aloe Vera', 'Chinese Evergreen'
         ];
         
+        // Show loading placeholder
+        this.indoorContainer.innerHTML = '<div class="flex items-center justify-center py-8"><div class="text-gray-500">Loading plants...</div></div>';
+        
         let cardsHTML = '';
         for (let i = 1; i <= 12; i++) {
             const imageUrl = i === 3 ? `images/indoor-plants/${i}.webp` : `images/indoor-plants/${i}.jpg`;
@@ -190,9 +194,12 @@ class PlantScrollLoader {
             cardsHTML += this.createPlantCard(imageUrl, plantName, 'Indoor Plant', i);
         }
         
-        this.indoorContainer.innerHTML = cardsHTML;
-        // Add click handlers after content is loaded
-        setTimeout(() => this.addClickHandlers(), 100);
+        // Simulate progressive loading
+        setTimeout(() => {
+            this.indoorContainer.innerHTML = cardsHTML;
+            // Add click handlers after content is loaded
+            setTimeout(() => this.addClickHandlers(), 100);
+        }, 300);
     }
     
     loadOutdoorPlants() {
@@ -202,6 +209,9 @@ class PlantScrollLoader {
             'Geranium', 'Petunia', 'Azalea', 'Begonia'
         ];
         
+        // Show loading placeholder
+        this.outdoorContainer.innerHTML = '<div class="flex items-center justify-center py-8"><div class="text-gray-500">Loading plants...</div></div>';
+        
         let cardsHTML = '';
         for (let i = 1; i <= 12; i++) {
             const imageUrl = `images/outdoor-plants/${i}.jpg`;
@@ -209,36 +219,33 @@ class PlantScrollLoader {
             cardsHTML += this.createPlantCard(imageUrl, plantName, 'Outdoor Plant', i);
         }
         
-        this.outdoorContainer.innerHTML = cardsHTML;
-        // Add click handlers after content is loaded
-        setTimeout(() => this.addClickHandlers(), 100);
+        // Simulate progressive loading with slight delay for outdoor
+        setTimeout(() => {
+            this.outdoorContainer.innerHTML = cardsHTML;
+            // Add click handlers after content is loaded
+            setTimeout(() => this.addClickHandlers(), 100);
+        }, 600);
     }
 }
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new HeroSlider();
-    new PlantScrollLoader();
+    // Initialize hero slider first (critical)
+    const heroSlider = new HeroSlider();
+    
+    // Initialize mobile menu (immediate)
+    const mobileMenu = new MobileMenu();
+    
+    // Initialize image preview modal
+    const imageModal = new ImagePreviewModal();
+    
+    // Delay plant loading to prioritize hero section
+    setTimeout(() => {
+        new PlantScrollLoader();
+    }, 1500); // Wait 1.5 seconds for hero to settle
 });
 
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-}
 
 // Shopping Cart Functionality
 let cart = JSON.parse(localStorage.getItem('nurseryCart')) || [];
@@ -264,3 +271,81 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Mobile Menu Functionality
+class MobileMenu {
+    constructor() {
+        this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        this.mobileMenu = document.getElementById('mobileMenu');
+        this.line1 = document.getElementById('line1');
+        this.line2 = document.getElementById('line2');
+        this.line3 = document.getElementById('line3');
+        this.isOpen = false;
+        
+        this.init();
+    }
+    
+    init() {
+        if (this.mobileMenuToggle) {
+            this.mobileMenuToggle.addEventListener('click', () => this.toggleMenu());
+        }
+        
+        // Close menu when clicking on menu links
+        if (this.mobileMenu) {
+            const menuLinks = this.mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => this.closeMenu());
+            });
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (this.isOpen && !this.mobileMenuToggle.contains(e.target) && !this.mobileMenu.contains(e.target)) {
+                this.closeMenu();
+            }
+        });
+        
+        // Close menu on window resize if desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && this.isOpen) {
+                this.closeMenu();
+            }
+        });
+    }
+    
+    toggleMenu() {
+        if (this.isOpen) {
+            this.closeMenu();
+        } else {
+            this.openMenu();
+        }
+    }
+    
+    openMenu() {
+        this.isOpen = true;
+        this.mobileMenu.classList.remove('hidden');
+        this.animateToX();
+        document.body.style.overflow = 'hidden';
+    }
+    
+    closeMenu() {
+        this.isOpen = false;
+        this.mobileMenu.classList.add('hidden');
+        this.animateToHamburger();
+        document.body.style.overflow = '';
+    }
+    
+    animateToX() {
+        // Transform hamburger to X
+        this.line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+        this.line2.style.opacity = '0';
+        this.line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    }
+    
+    animateToHamburger() {
+        // Transform X back to hamburger
+        this.line1.style.transform = 'rotate(0) translate(0, 0)';
+        this.line2.style.opacity = '1';
+        this.line3.style.transform = 'rotate(0) translate(0, 0)';
+    }
+}
