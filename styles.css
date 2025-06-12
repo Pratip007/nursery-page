@@ -1,0 +1,394 @@
+/* Base Styles and Variables */
+:root {
+    --forest: #0A1F0E;
+    --sage: #4A6441;
+    --moss: #0E2912;
+    --mint: #5A855C;
+    --cream: #F7F5F0;
+    --earth: #8B7355;
+    --gold: #D4AF37;
+    --charcoal: #1F1F1F;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--charcoal);
+    background-color: var(--cream);
+    line-height: 1.6;
+}
+
+/* Typography */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Premium Effects */
+.premium-gradient {
+    background: linear-gradient(135deg, rgba(10, 31, 14, 0.05) 0%, rgba(74, 100, 65, 0.1) 100%);
+}
+
+.luxury-shadow {
+    box-shadow: 0 10px 30px rgba(10, 31, 14, 0.1),
+                0 1px 3px rgba(10, 31, 14, 0.05);
+}
+
+.elegant-shadow {
+    box-shadow: 0 4px 20px rgba(10, 31, 14, 0.08),
+                0 1px 2px rgba(10, 31, 14, 0.04);
+}
+
+/* Animations */
+.floating-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(10, 31, 14, 0.15);
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--forest);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(10, 31, 14, 0.7), rgba(10, 31, 14, 0.7)),
+                url('images/hero-bg.jpg') center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Features Section */
+.feature-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    /* Remove transition and hover effects */
+    /* transition: all 0.3s ease; */
+}
+
+/* Remove hover effect */
+/*
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(10, 31, 14, 0.15);
+}
+*/
+
+/* Plant Cards */
+.plant-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(10, 31, 14, 0.15);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    font-size: 4rem;
+    color: var(--sage);
+    opacity: 0.2;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, rgba(10, 31, 14, 0.05) 0%, rgba(74, 100, 65, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Footer */
+.footer {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 4rem 0;
+}
+
+/* Comprehensive Responsive Enhancements */
+/* Extra Small Devices (320px and up) */
+@media (max-width: 479px) {
+    .nav-brand {
+        font-size: 1.25rem !important;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 2.25rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+    }
+    .section-title {
+        font-size: 1.75rem !important;
+        line-height: 2rem !important;
+    }
+    .btn-responsive {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.875rem !important;
+    }
+    .card-responsive {
+        margin: 0 0.5rem !important;
+    }
+    .stats-mobile {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    .stats-divider {
+        display: none !important;
+    }
+}
+
+/* Small Devices (480px to 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 2.75rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.125rem !important;
+        line-height: 1.75rem !important;
+    }
+    .section-title {
+        font-size: 2rem !important;
+        line-height: 2.25rem !important;
+    }
+}
+
+/* Medium Devices (640px to 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+    .hero-title {
+        font-size: 3rem !important;
+        line-height: 3.25rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem !important;
+        line-height: 1.75rem !important;
+    }
+    .grid-responsive-md {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Large Devices (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 3.5rem !important;
+        line-height: 3.75rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.375rem !important;
+        line-height: 1.875rem !important;
+    }
+    .grid-responsive-lg {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem !important;
+    }
+    .flex-responsive-tablet {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 2rem !important;
+    }
+}
+
+/* Extra Large Devices (1024px and up) */
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4rem !important;
+        line-height: 4.25rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+    }
+}
+
+/* Ultra Wide Devices (1536px and up) */
+@media (min-width: 1536px) {
+    .hero-title {
+        font-size: 5rem !important;
+        line-height: 5.25rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.75rem !important;
+        line-height: 2.25rem !important;
+    }
+    .section-title-xl {
+        font-size: 4rem !important;
+        line-height: 4.25rem !important;
+    }
+}
+
+/* Navigation Responsive Enhancements */
+@media (max-width: 1023px) {
+    .nav-desktop {
+        display: none !important;
+    }
+    .nav-mobile-toggle {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: flex !important;
+    }
+    .nav-mobile-toggle {
+        display: none !important;
+    }
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Container Responsive Improvements */
+.container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container-responsive {
+        max-width: 640px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-responsive {
+        max-width: 768px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-responsive {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container-responsive {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container-responsive {
+        max-width: 1536px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* Utility Classes */
+.text-forest { color: var(--forest); }
+.text-sage { color: var(--sage); }
+.text-moss { color: var(--moss); }
+.text-mint { color: var(--mint); }
+.text-cream { color: var(--cream); }
+.text-earth { color: var(--earth); }
+.text-gold { color: var(--gold); }
+.text-charcoal { color: var(--charcoal); }
+
+.bg-forest { background-color: var(--forest); }
+.bg-sage { background-color: var(--sage); }
+.bg-moss { background-color: var(--moss); }
+.bg-mint { background-color: var(--mint); }
+.bg-cream { background-color: var(--cream); }
+.bg-earth { background-color: var(--earth); }
+.bg-gold { background-color: var(--gold); }
+.bg-charcoal { background-color: var(--charcoal); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sage);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--forest);
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        color: black;
+        background: white;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+} 

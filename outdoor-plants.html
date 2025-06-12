@@ -4,95 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outdoor Plants - GreenSpace Nursery</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-green': '#2D5A27',
-                        'light-green': '#6BA644',
-                        'accent-green': '#9BCF53',
-                        'soft-green': '#E8F5E8',
+                        'forest': '#0A1F0E',
+                        'sage': '#4A6441',
+                        'moss': '#0E2912',
+                        'mint': '#5A855C',
+                        'cream': '#F7F5F0',
+                        'earth': '#8B7355',
+                        'gold': '#D4AF37',
+                        'charcoal': '#1F1F1F',
                     },
                     fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    }
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
                 }
             }
         }
     </script>
 </head>
-<body class="font-inter text-gray-800 bg-white">
+<body class="font-sans text-charcoal bg-cream">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-white/20 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-5 flex justify-between items-center h-[70px]">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-sage/20 transition-all duration-300 elegant-shadow">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-[80px]">
             <div class="flex items-center">
-                <h2 class="text-primary-green font-bold text-2xl">
-                    <i class="fas fa-seedling text-light-green mr-2"></i>
-                    GreenSpace
+                <h2 class="text-forest font-serif font-bold text-3xl uppercase">
+                    <i class="fas fa-leaf text-sage mr-3 animate-float"></i>
+                    RITWIKA NURSERY
                 </h2>
             </div>
-            <ul class="hidden md:flex space-x-8">
-                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
+            <ul class="hidden md:flex space-x-10">
+                <li><a href="index.html" class="text-charcoal font-medium text-lg hover:text-forest transition-colors duration-300 relative group">
                     Home
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-sage transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="outdoor-plants.html" class="text-primary-green font-medium relative group">
+                <li><a href="outdoor-plants.html" class="text-forest font-medium text-lg relative group">
                     Outdoor Plants
-                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-light-green"></span>
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-sage"></span>
                 </a></li>
-                <li><a href="indoor-plants.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
+                <li><a href="indoor-plants.html" class="text-charcoal font-medium text-lg hover:text-forest transition-colors duration-300 relative group">
                     Indoor Plants
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-sage transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary-green transition-colors duration-300 relative group">
-                    About
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-green transition-all duration-300 group-hover:w-full"></span>
+                <li><a href="about.html" class="text-charcoal font-medium text-lg hover:text-forest transition-colors duration-300 relative group">
+                    About Us
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-sage transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
             </ul>
             <div class="flex items-center space-x-6">
-                <!-- <i class="fas fa-search text-xl text-gray-800 hover:text-primary-green cursor-pointer transition-colors duration-300"></i> -->
+                <button class="bg-forest text-white px-6 py-2 rounded-full font-medium hover:bg-moss transition-all duration-300 elegant-shadow hover:scale-105">
+                    Contact Us
+                </button>
             </div>
             <div id="mobileMenuToggle" class="md:hidden flex flex-col cursor-pointer">
-                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300" id="line1"></span>
-                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300" id="line2"></span>
-                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line3"></span>
+                <span class="w-6 h-0.5 bg-charcoal mb-1 transition-all duration-300" id="line1"></span>
+                <span class="w-6 h-0.5 bg-charcoal mb-1 transition-all duration-300" id="line2"></span>
+                <span class="w-6 h-0.5 bg-charcoal transition-all duration-300" id="line3"></span>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 hidden">
-            <div class="px-5 py-4 space-y-4">
-                <a href="index.html" class="block text-gray-800 font-medium py-2 hover:text-primary-green transition-colors duration-300">
+        <div id="mobileMenu" class="md:hidden bg-white/95 backdrop-blur-md border-t border-sage/20 hidden">
+            <div class="px-6 py-6 space-y-4">
+                <a href="index.html" class="block text-charcoal font-medium py-3 text-lg hover:text-forest transition-colors duration-300">
                     Home
                 </a>
-                <a href="outdoor-plants.html" class="block text-primary-green font-medium py-2">
+                <a href="outdoor-plants.html" class="block text-forest font-medium py-3 text-lg">
                     Outdoor Plants
                 </a>
-                <a href="indoor-plants.html" class="block text-gray-800 font-medium py-2 hover:text-primary-green transition-colors duration-300">
+                <a href="indoor-plants.html" class="block text-charcoal font-medium py-3 text-lg hover:text-forest transition-colors duration-300">
                     Indoor Plants
                 </a>
-                <a href="about.html" class="block text-gray-800 font-medium py-2 hover:text-primary-green transition-colors duration-300">
-                    About
+                <a href="about.html" class="block text-charcoal font-medium py-3 text-lg hover:text-forest transition-colors duration-300">
+                    About Us
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-soft-green to-white">
-        <div class="max-w-6xl mx-auto px-5 text-center">
-            <h1 class="text-5xl font-bold text-gray-800 mb-6">Outdoor Plants</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover our beautiful selection of outdoor plants perfect for your garden, patio, and landscape. From flowering shrubs to majestic trees, find the perfect additions to your outdoor space.</p>
+    <section class="pt-32 pb-20 bg-gradient-to-br from-sage/20 to-cream">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="font-serif text-5xl md:text-6xl font-light text-forest mb-8 animate-fade-in">Outdoor Masterpieces</h1>
+            <p class="text-xl md:text-2xl text-charcoal/70 max-w-4xl mx-auto leading-relaxed">
+                Create breathtaking landscapes with our premium selection of outdoor plants. From majestic trees to colorful perennials, discover the perfect plants to transform your outdoor spaces into natural havens.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b border-sage/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-6 py-3 bg-forest text-white rounded-full font-medium transition-all duration-300 elegant-shadow">
+                    All Plants
+                </button>
+                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
+                    Trees & Shrubs
+                </button>
+                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
+                    Flowering Plants
+                </button>
+                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
+                    Native Species
+                </button>
+                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
+                    Seasonal Color
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- All Outdoor Plants Gallery -->
     <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-7xl mx-auto px-6">
         
             <!-- Plants Container -->
             <div id="plantsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -100,85 +133,157 @@
             </div>
 
             <!-- Load More Button -->
-            <div class="text-center mt-12">
-                <button id="loadMoreBtn" class="bg-light-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-green transition-colors duration-300">
-                    Load More Plants
+            <div class="text-center mt-16">
+                <button id="loadMoreBtn" class="bg-sage text-white px-10 py-4 rounded-full font-medium hover:bg-forest transition-all duration-300 elegant-shadow hover:scale-105">
+                    Explore More Gardens
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Design Tips Section -->
+    <section class="py-20 bg-gradient-to-br from-cream/50 to-sage/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-light text-forest mb-6">
+                    Landscape Design Excellence
+                </h2>
+                <p class="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+                    Professional insights to help you create stunning outdoor spaces that thrive in every season.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                        <i class="fas fa-map text-3xl text-sage"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-forest mb-4">Site Planning</h3>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        Understanding your space, soil conditions, and microclimates for optimal plant placement.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                        <i class="fas fa-palette text-3xl text-sage"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-forest mb-4">Color Harmony</h3>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        Creating beautiful seasonal displays with complementary colors and textures.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                        <i class="fas fa-seedling text-3xl text-sage"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-forest mb-4">Native Integration</h3>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        Incorporating native plants for sustainable, low-maintenance landscape solutions.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                        <i class="fas fa-calendar-alt text-3xl text-sage"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-forest mb-4">Seasonal Interest</h3>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        Designing for year-round beauty with strategic plant selection and placement.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Image Preview Modal -->
     <div id="imagePreviewModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden relative">
-            <button id="closeModal" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all duration-300 z-10">
-                <i class="fas fa-times"></i>
+        <div class="bg-white rounded-2xl max-w-4xl max-h-[90vh] overflow-hidden relative elegant-shadow">
+            <button id="closeModal" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-70 transition-all duration-300 z-10">
+                <i class="fas fa-times text-lg"></i>
             </button>
-            <div class="p-4">
-                <img id="previewImage" src="" alt="" class="max-w-full max-h-[70vh] object-contain mx-auto">
-                <div class="mt-4 text-center">
-                    <h3 id="previewTitle" class="text-xl font-semibold text-gray-800 mb-2"></h3>
-                    <p id="previewDescription" class="text-gray-600"></p>
+            <div class="p-6">
+                <img id="previewImage" src="" alt="" class="max-w-full max-h-[70vh] object-contain mx-auto rounded-xl">
+                <div class="mt-6 text-center">
+                    <h3 id="previewTitle" class="font-serif text-2xl font-medium text-forest mb-3"></h3>
+                    <p id="previewDescription" class="text-charcoal/70 text-lg"></p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="max-w-6xl mx-auto px-5">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer class="bg-charcoal text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">
-                        <i class="fas fa-seedling text-light-green mr-2"></i>
-                        GreenSpace
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6 uppercase">
+                        <i class="fas fa-leaf text-sage mr-3"></i>
+                        RITWIKA NURSERY
                     </h3>
-                    <p class="text-gray-400 mb-4">Your trusted partner in creating beautiful, thriving gardens and outdoor spaces.</p>
+                    <span class="text-sage font-medium tracking-wider text-sm block mb-8">All kinds of fruit, flower, show, roadside plant grower & suppliers</span>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-light-green transition-colors duration-300">
-                            <i class="fab fa-twitter"></i>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-pinterest text-lg"></i>
                         </a>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="nursery-website.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
-                        <li><a href="outdoor-plants.html" class="text-gray-400 hover:text-white transition-colors duration-300">Outdoor Plants</a></li>
-                        <li><a href="indoor-plants.html" class="text-gray-400 hover:text-white transition-colors duration-300">Indoor Plants</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Discover</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Our Story</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Plant Care Library</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Garden Design</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Seasonal Guides</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Trees</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Flowering Shrubs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Ground Cover</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Garden Tools</a></li>
+                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Collections</h3>
+                    <ul class="space-y-3">
+                        <li><a href="indoor-plants.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Indoor Gardens</a></li>
+                        <li><a href="outdoor-plants.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Outdoor Landscapes</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Rare & Exotic</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Garden Essentials</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope mr-2"></i> hello@greenspace.com</li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Garden St, Plant City</li>
+                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Contact & Company Info</h3>
+                    <ul class="space-y-4 text-white/70">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-leaf text-sage mt-1"></i>
+                            <span class="font-medium">Ritwika Nursery<br>Proprietor: Bhabatosh Giri<br>All kinds of fruit, flower, show, roadside plant grower & suppliers</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-sage"></i>
+                            <span class="font-medium">6294248254, 6296180262</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-sage"></i>
+                            <span class="font-medium">bhabatoshg92@gmail.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-sage mt-1"></i>
+                            <span class="font-medium">Saikeswar, Alokhiyapur, Contai, Purba Medinipur, 720401</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2024 GreenSpace Nursery. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie Policy</a>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/60 mb-4 md:mb-0 font-medium">&copy; 2024 GreenSpace Nursery. Cultivating dreams, naturally.</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Privacy</a>
+                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Terms</a>
+                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Sustainability</a>
                 </div>
             </div>
         </div>

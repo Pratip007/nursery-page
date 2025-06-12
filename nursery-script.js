@@ -141,24 +141,16 @@ class PlantScrollLoader {
     createPlantCard(imageUrl, plantName, category, index) {
         const cardId = `plant-card-${category.replace(' ', '-').toLowerCase()}-${index}`;
         return `
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex-shrink-0" style="width: 280px;">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0" style="width: 280px;">
                 <div class="relative overflow-hidden cursor-pointer plant-image-container" 
-                     data-image="${imageUrl}" 
-                     data-title="${plantName}" 
-                     data-description="${category}">
+                     data-image="${imageUrl}">
                     <img 
                         src="${imageUrl}" 
-                        alt="${plantName}" 
-                        class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300"
+                        alt="Plant Image" 
+                        class="w-full h-64 object-cover"
                         loading="lazy"
                         onerror="this.parentElement.parentElement.style.display='none'"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div class="bg-white bg-opacity-90 rounded-full p-3">
-                            <i class="fas fa-search-plus text-gray-800 text-lg"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         `;
@@ -178,20 +170,13 @@ class PlantScrollLoader {
     }
     
     loadIndoorPlants() {
-        const plantNames = [
-            'Monstera Deliciosa', 'Snake Plant', 'Peace Lily', 'Fiddle Leaf Fig',
-            'Rubber Plant', 'ZZ Plant', 'Pothos', 'Philodendron',
-            'Spider Plant', 'Boston Fern', 'Aloe Vera', 'Chinese Evergreen'
-        ];
-        
         // Show loading placeholder
         this.indoorContainer.innerHTML = '<div class="flex items-center justify-center py-8"><div class="text-gray-500">Loading plants...</div></div>';
         
         let cardsHTML = '';
         for (let i = 1; i <= 12; i++) {
             const imageUrl = i === 3 ? `images/indoor-plants/${i}.webp` : `images/indoor-plants/${i}.jpg`;
-            const plantName = plantNames[i - 1] || `Indoor Plant ${i}`;
-            cardsHTML += this.createPlantCard(imageUrl, plantName, 'Indoor Plant', i);
+            cardsHTML += this.createPlantCard(imageUrl, '', 'Indoor Plant', i);
         }
         
         // Simulate progressive loading
@@ -203,20 +188,13 @@ class PlantScrollLoader {
     }
     
     loadOutdoorPlants() {
-        const plantNames = [
-            'Rose Bush', 'Lavender', 'Hydrangea', 'Jasmine',
-            'Bougainvillea', 'Marigold', 'Sunflower', 'Hibiscus',
-            'Geranium', 'Petunia', 'Azalea', 'Begonia'
-        ];
-        
         // Show loading placeholder
         this.outdoorContainer.innerHTML = '<div class="flex items-center justify-center py-8"><div class="text-gray-500">Loading plants...</div></div>';
         
         let cardsHTML = '';
         for (let i = 1; i <= 12; i++) {
             const imageUrl = `images/outdoor-plants/${i}.jpg`;
-            const plantName = plantNames[i - 1] || `Outdoor Plant ${i}`;
-            cardsHTML += this.createPlantCard(imageUrl, plantName, 'Outdoor Plant', i);
+            cardsHTML += this.createPlantCard(imageUrl, '', 'Outdoor Plant', i);
         }
         
         // Simulate progressive loading with slight delay for outdoor
