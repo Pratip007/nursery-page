@@ -107,28 +107,7 @@
         </div>
     </section>
 
-    <!-- Filter Section -->
-    <section class="py-8 bg-white border-b border-sage/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button class="px-6 py-3 bg-forest text-white rounded-full font-medium transition-all duration-300 elegant-shadow">
-                    All Plants
-                </button>
-                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
-                    Trees & Shrubs
-                </button>
-                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
-                    Flowering Plants
-                </button>
-                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
-                    Native Species
-                </button>
-                <button class="px-6 py-3 bg-white text-charcoal border border-sage/30 rounded-full font-medium hover:bg-sage/10 transition-all duration-300">
-                    Seasonal Color
-                </button>
-            </div>
-        </div>
-    </section>
+  
 
     <!-- All Outdoor Plants Gallery -->
     <section class="py-20 bg-white">
@@ -162,7 +141,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center group">
-                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                    <div class="circle-fixed circle-lg bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
                         <i class="fas fa-map text-3xl text-sage"></i>
                     </div>
                     <h3 class="font-serif text-xl font-medium text-forest mb-4">Site Planning</h3>
@@ -172,7 +151,7 @@
                 </div>
                 
                 <div class="text-center group">
-                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                    <div class="circle-fixed circle-lg bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
                         <i class="fas fa-palette text-3xl text-sage"></i>
                     </div>
                     <h3 class="font-serif text-xl font-medium text-forest mb-4">Color Harmony</h3>
@@ -182,7 +161,7 @@
                 </div>
                 
                 <div class="text-center group">
-                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                    <div class="circle-fixed circle-lg bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
                         <i class="fas fa-seedling text-3xl text-sage"></i>
                     </div>
                     <h3 class="font-serif text-xl font-medium text-forest mb-4">Native Integration</h3>
@@ -192,7 +171,7 @@
                 </div>
                 
                 <div class="text-center group">
-                    <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                    <div class="circle-fixed circle-lg bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/20 transition-colors duration-300">
                         <i class="fas fa-calendar-alt text-3xl text-sage"></i>
                     </div>
                     <h3 class="font-serif text-xl font-medium text-forest mb-4">Seasonal Interest</h3>
@@ -221,76 +200,133 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-charcoal text-white py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer class="bg-gradient-to-br from-charcoal via-charcoal/95 to-forest text-white py-24 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-20 decorative-circle-lg bg-sage/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 decorative-circle-xl bg-forest/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
+                <!-- Brand Section -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-8">
+                        <div class="circle-fixed circle-lg bg-gradient-to-br from-sage to-forest rounded-2xl flex items-center justify-center mr-4 luxury-shadow">
+                            <i class="fas fa-leaf text-2xl text-white"></i>
+                        </div>
                 <div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-6 uppercase">
-                        <i class="fas fa-leaf text-sage mr-3"></i>
-                        RITWIKA NURSERY
-                    </h3>
-                    <span class="text-sage font-medium tracking-wider text-sm block mb-8">All kinds of fruit, flower, show, roadside plant grower & suppliers</span>
+                            <span class="font-serif text-3xl font-semibold block uppercase">RITWIKA NURSERY</span>
+                            <span class="text-sage font-medium tracking-wider text-sm">All kinds of fruit, flower, show, roadside plant grower & suppliers</span>
+                        </div>
+                    </div>
+                    <p class="text-white/80 leading-relaxed mb-8 max-w-md text-lg font-light">
+                        Cultivating extraordinary botanical experiences through artisanal plant curation, master horticultural expertise, and an unwavering commitment to excellence since 2003.
+                    </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
-                            <i class="fab fa-facebook-f text-lg"></i>
+                        <a href="https://www.facebook.com/share/16Ym4773Jt/?mibextid=qi2Omg" target="_blank" class="circle-fixed circle-md bg-gradient-to-br from-sage to-forest rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 luxury-shadow group">
+                            <i class="fab fa-facebook-f text-white group-hover:scale-110 transition-transform duration-300"></i>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
-                            <i class="fab fa-twitter text-lg"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300">
-                            <i class="fab fa-pinterest text-lg"></i>
+                        <a href="https://wa.me/916296180262" target="_blank" class="circle-fixed circle-md bg-gradient-to-br from-sage to-forest rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 luxury-shadow group">
+                            <i class="fab fa-whatsapp text-white group-hover:scale-110 transition-transform duration-300"></i>
                         </a>
                     </div>
                 </div>
+                
+                <!-- Quick Links -->
                 <div>
-                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Discover</h3>
-                    <ul class="space-y-3">
-                        <li><a href="about.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Our Story</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Plant Care Library</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Garden Design</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Seasonal Guides</a></li>
+                    <h3 class="font-serif text-2xl font-semibold mb-8 text-white">Explore</h3>
+                    <ul class="space-y-4">
+                        <li><a href="indoor-plants.html" class="text-white/70 hover:text-sage transition-all duration-300 text-lg font-light group flex items-center">
+                            <span class="w-2 h-2 min-w-[8px] min-h-[8px] bg-sage rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                            Indoor Sanctuaries
+                        </a></li>
+                        <li><a href="outdoor-plants.html" class="text-white/70 hover:text-sage transition-all duration-300 text-lg font-light group flex items-center">
+                            <span class="w-2 h-2 min-w-[8px] min-h-[8px] bg-sage rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                            Garden Masterpieces
+                        </a></li>
+                        <li><a href="about.html" class="text-white/70 hover:text-sage transition-all duration-300 text-lg font-light group flex items-center">
+                            <span class="w-2 h-2 min-w-[8px] min-h-[8px] bg-sage rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                            Our Story
+                        </a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-all duration-300 text-lg font-light group flex items-center">
+                            <span class="w-2 h-2 min-w-[8px] min-h-[8px] bg-sage rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                            Care Mastery
+                        </a></li>
+                        <li><a href="#" class="text-white/70 hover:text-sage transition-all duration-300 text-lg font-light group flex items-center">
+                            <span class="w-2 h-2 min-w-[8px] min-h-[8px] bg-sage rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                            Expert Consultation
+                        </a></li>
                     </ul>
                 </div>
+                
+                <!-- Contact Info -->
                 <div>
-                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Collections</h3>
-                    <ul class="space-y-3">
-                        <li><a href="indoor-plants.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Indoor Gardens</a></li>
-                        <li><a href="outdoor-plants.html" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Outdoor Landscapes</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Rare & Exotic</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-sage transition-colors duration-300 font-medium">Garden Essentials</a></li>
-                    </ul>
+                    <h3 class="font-serif text-2xl font-semibold mb-8 text-white">Contact & Company Info</h3>
+                    <div class="space-y-6 text-white/70">
+                        <div class="flex items-start group">
+                            <div class="circle-fixed circle-sm bg-sage/20 rounded-xl flex items-center justify-center mr-4 group-hover:bg-sage/30 transition-colors duration-300">
+                                <i class="fas fa-leaf text-sage"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white/90">Ritwika Nursery</p>
+                                <p class="text-white/70">Proprietor: Bhabatosh Giri</p>
+                                <p class="text-white/70">All kinds of fruit, flower, show, roadside plant grower & suppliers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center group">
+                            <div class="circle-fixed circle-sm bg-sage/20 rounded-xl flex items-center justify-center mr-4 group-hover:bg-sage/30 transition-colors duration-300">
+                                <i class="fas fa-phone text-sage"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white/90">+916294248254, +916296180262</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center group">
+                            <div class="circle-fixed circle-sm bg-sage/20 rounded-xl flex items-center justify-center mr-4 group-hover:bg-sage/30 transition-colors duration-300">
+                                <i class="fas fa-envelope text-sage"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white/90">ritwikanursury@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="circle-fixed circle-sm bg-sage/20 rounded-xl flex items-center justify-center mr-4 group-hover:bg-sage/30 transition-colors duration-300">
+                                <i class="fas fa-map-marker-alt text-sage"></i>
                 </div>
                 <div>
-                    <h3 class="font-serif text-xl font-semibold mb-6 text-white">Contact & Company Info</h3>
-                    <ul class="space-y-4 text-white/70">
-                        <li class="flex items-start space-x-3">
-                            <i class="fas fa-leaf text-sage mt-1"></i>
-                            <span class="font-medium">Ritwika Nursery<br>Proprietor: Bhabatosh Giri<br>All kinds of fruit, flower, show, roadside plant grower & suppliers</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-sage"></i>
-                            <span class="font-medium">6294248254, 6296180262</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-sage"></i>
-                            <span class="font-medium">bhabatoshg92@gmail.com</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fas fa-map-marker-alt text-sage mt-1"></i>
-                            <span class="font-medium">Saikeswar, Alokhiyapur, Contai, Purba Medinipur, 720401</span>
-                        </li>
-                    </ul>
+                                <p class="font-medium text-white/90">Saikeswar, Alokhiyapur, Contai, Purba Medinipur, 720401</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-white/60 mb-4 md:mb-0 font-medium">&copy; 2024 GreenSpace Nursery. Cultivating dreams, naturally.</p>
-                <div class="flex space-x-8">
-                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Privacy</a>
-                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Terms</a>
-                    <a href="#" class="text-white/60 hover:text-sage transition-colors duration-300 font-medium">Sustainability</a>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center mb-6 md:mb-0">
+                        <div class="circle-fixed circle-sm bg-sage/20 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-copyright text-sage text-sm"></i>
+                        </div>
+                        <p class="text-white/60 text-lg">
+                            2025 GreenSpace Nursery. <span class="text-sage">Cultivating Excellence.</span>
+                        </p>
+                    </div>
+                    <div class="flex space-x-8 text-white/60">
+                        <a href="#" class="hover:text-sage transition-all duration-300 text-lg font-light relative group">
+                            Privacy Policy
+                            <span class="absolute bottom-0 left-0 w-0 h-px bg-sage group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                        <a href="#" class="hover:text-sage transition-all duration-300 text-lg font-light relative group">
+                            Terms of Service
+                            <span class="absolute bottom-0 left-0 w-0 h-px bg-sage group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                        <a href="#" class="hover:text-sage transition-all duration-300 text-lg font-light relative group">
+                            Sustainability
+                            <span class="absolute bottom-0 left-0 w-0 h-px bg-sage group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

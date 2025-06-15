@@ -156,6 +156,108 @@ body {
     padding: 4rem 0;
 }
 
+/* Fix for circles and boxes shrinking on mobile */
+.aspect-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+/* Ensure circles maintain perfect round shape */
+.circle-fixed {
+    width: var(--circle-size, 80px);
+    height: var(--circle-size, 80px);
+    min-width: var(--circle-size, 80px);
+    min-height: var(--circle-size, 80px);
+    flex-shrink: 0;
+}
+
+/* Responsive circle sizes */
+.circle-sm {
+    --circle-size: 32px;
+}
+
+.circle-md {
+    --circle-size: 48px;
+}
+
+.circle-lg {
+    --circle-size: 64px;
+}
+
+.circle-xl {
+    --circle-size: 80px;
+}
+
+/* Box elements that shouldn't shrink */
+.box-fixed {
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+/* Large decorative circles - responsive sizing */
+.decorative-circle-lg {
+    width: 256px;
+    height: 256px;
+    min-width: 256px;
+    min-height: 256px;
+}
+
+.decorative-circle-xl {
+    width: 384px;
+    height: 384px;
+    min-width: 384px;
+    min-height: 384px;
+}
+
+/* Social media icons - fixed size */
+.social-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    flex-shrink: 0;
+}
+
+/* Feature card icons - responsive but maintain aspect ratio */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+    .feature-icon {
+        width: 96px;
+        height: 96px;
+        min-width: 96px;
+        min-height: 96px;
+    }
+    
+    .decorative-circle-lg {
+        width: 384px;
+        height: 384px;
+        min-width: 384px;
+        min-height: 384px;
+    }
+    
+    .decorative-circle-xl {
+        width: 512px;
+        height: 512px;
+        min-width: 512px;
+        min-height: 512px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-icon {
+        width: 128px;
+        height: 128px;
+        min-width: 128px;
+        min-height: 128px;
+    }
+}
+
 /* Comprehensive Responsive Enhancements */
 /* Extra Small Devices (320px and up) */
 @media (max-width: 479px) {

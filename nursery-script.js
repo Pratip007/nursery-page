@@ -141,13 +141,13 @@ class PlantScrollLoader {
     createPlantCard(imageUrl, plantName, category, index) {
         const cardId = `plant-card-${category.replace(' ', '-').toLowerCase()}-${index}`;
         return `
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0" style="width: 280px;">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-shrink-0" style="width: 360px;">
                 <div class="relative overflow-hidden cursor-pointer plant-image-container" 
                      data-image="${imageUrl}">
                     <img 
                         src="${imageUrl}" 
                         alt="Plant Image" 
-                        class="w-full h-64 object-cover"
+                        class="w-full h-80 object-cover"
                         loading="lazy"
                         onerror="this.parentElement.parentElement.style.display='none'"
                     />
