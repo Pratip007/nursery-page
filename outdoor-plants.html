@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outdoor Plants - GreenSpace Nursery</title>
+    <title>Outdoor Plants Contai | Best Outdoor Plant Nursery in Purba Medinipur | Ritwika Nursery</title>
+    <meta name="description" content="Premium outdoor plants in Contai from Ritwika Nursery - the best outdoor plant nursery in Purba Medinipur. Fruit trees, flowering plants, landscaping plants near Digha. Garden plants for Bengal climate.">
+    <meta name="keywords" content="outdoor plants contai, outdoor plant nursery purba medinipur, fruit trees near digha, landscaping plants contai, garden plants ritwika nursery, outdoor gardening contai, best outdoor plants bengal">
+    <link rel="canonical" href="https://ritwikanursery.com/outdoor-plants.html">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -61,7 +64,7 @@
                 </a></li>
             </ul>
             <div class="hidden sm:flex items-center space-x-4 lg:space-x-6">
-                <button class="bg-forest text-white px-4 py-2 lg:px-6 lg:py-2 rounded-full font-medium text-sm lg:text-base hover:bg-moss transition-all duration-300 elegant-shadow hover:scale-105">
+                <button id="contactBtn" class="bg-forest text-white px-4 py-2 lg:px-6 lg:py-2 rounded-full font-medium text-sm lg:text-base hover:bg-moss transition-all duration-300 elegant-shadow hover:scale-105">
                     <span class="hidden md:inline">Contact Us</span>
                     <span class="md:hidden">Contact</span>
                 </button>
@@ -89,7 +92,7 @@
                     About Us
                 </a>
                 <div class="sm:hidden pt-4 border-t border-sage/20">
-                    <button class="w-full bg-forest text-white px-4 py-3 rounded-full font-medium text-base hover:bg-moss transition-all duration-300">
+                    <button id="contactBtnMobile" class="w-full bg-forest text-white px-4 py-3 rounded-full font-medium text-base hover:bg-moss transition-all duration-300">
                         Contact Us
                     </button>
                 </div>
@@ -119,7 +122,7 @@
             </div>
 
             <!-- Load More Button -->
-            <div class="text-center mt-16">
+            <div class="flex justify-center mt-16">
                 <button id="loadMoreBtn" class="bg-sage text-white px-10 py-4 rounded-full font-medium hover:bg-forest transition-all duration-300 elegant-shadow hover:scale-105">
                     Explore More Gardens
                 </button>
@@ -331,6 +334,100 @@
             </div>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-2 sm:p-4">
+        <div class="bg-white rounded-xl sm:rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto hide-scrollbar relative">
+            <button id="closeContactModal" class="sticky top-3 sm:top-4 right-3 sm:right-4 ml-auto text-white hover:text-white bg-sage hover:bg-forest rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center transition-all duration-300 z-10 mb-2">
+                <i class="fas fa-times text-sm sm:text-base"></i>
+            </button>
+            
+            <div class="p-4 sm:p-6 lg:p-8 pt-0">
+                <div class="text-center mb-6 sm:mb-8">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-sage to-forest rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                        <i class="fas fa-leaf text-lg sm:text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-semibold text-forest mb-2">Get in Touch</h3>
+                    <p class="text-sm sm:text-base text-charcoal/70 font-light">Choose your preferred way to contact us</p>
+                </div>
+
+                <div class="space-y-3 sm:space-y-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/916296180262" target="_blank" class="flex items-center p-3 sm:p-4 bg-green-50 hover:bg-green-100 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-green-200 transition-all duration-300 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fab fa-whatsapp text-white text-lg sm:text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-sm sm:text-base">WhatsApp</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 truncate">+91 62961 80262</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-green-500 transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </a>
+
+                    <!-- Phone 1 -->
+                    <a href="tel:+916294248254" class="flex items-center p-3 sm:p-4 bg-blue-50 hover:bg-blue-100 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fas fa-phone text-white text-lg sm:text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-sm sm:text-base">Call Us</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 truncate">+91 62942 48254</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-blue-500 transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </a>
+
+                    <!-- Phone 2 -->
+                    <a href="tel:+916296180262" class="flex items-center p-3 sm:p-4 bg-blue-50 hover:bg-blue-100 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-white text-lg sm:text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-sm sm:text-base">Alternative Number</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 truncate">+91 62961 80262</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-blue-600 transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:ritwikanursury@gmail.com" class="flex items-center p-3 sm:p-4 bg-red-50 hover:bg-red-100 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-red-200 transition-all duration-300 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-lg sm:text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-sm sm:text-base">Email</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 truncate">ritwikanursury@gmail.com</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-red-500 transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/16Ym4773Jt/?mibextid=qi2Omg" target="_blank" class="flex items-center p-3 sm:p-4 bg-blue-50 hover:bg-blue-100 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300 group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fab fa-facebook-f text-white text-lg sm:text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-sm sm:text-base">Facebook</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 truncate">Follow our page</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-blue-600 transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </a>
+                </div>
+
+                <a href="https://maps.app.goo.gl/38EDH7rUSM3hFGLd8" target="_blank" class="block mt-4 sm:mt-6 p-3 sm:p-4 bg-sage/10 hover:bg-sage/20 rounded-lg sm:rounded-xl border-2 border-transparent hover:border-sage/30 transition-all duration-300 group">
+                    <div class="flex items-start">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 bg-sage/20 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-sage text-xs sm:text-sm"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-forest mb-1 text-xs sm:text-sm">Visit Our Nursery</h4>
+                            <p class="text-xs sm:text-sm text-charcoal/70 leading-relaxed">Saikeswar, Alokhiyapur, Contai<br>Purba Medinipur, 720401</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-charcoal/40 group-hover:text-sage transition-colors duration-300 text-xs sm:text-sm flex-shrink-0"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="nursery-script.js"></script>
     <script src="outdoor-plants.js"></script>

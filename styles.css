@@ -478,6 +478,16 @@ body {
     background: var(--forest);
 }
 
+/* Hide scrollbar for contact modal */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
 /* Print Styles */
 @media print {
     .no-print {

@@ -206,6 +206,69 @@ class PlantScrollLoader {
     }
 }
 
+// Contact Modal Class
+class ContactModal {
+    constructor() {
+        this.modal = document.getElementById('contactModal');
+        this.closeButton = document.getElementById('closeContactModal');
+        this.contactBtn = document.getElementById('contactBtn');
+        this.contactBtnMobile = document.getElementById('contactBtnMobile');
+        this.bookConsultationBtn = document.getElementById('bookConsultationBtn');
+        
+        this.init();
+    }
+    
+    init() {
+        // Close button handler
+        if (this.closeButton) {
+            this.closeButton.addEventListener('click', () => this.hideModal());
+        }
+        
+        // Click outside modal to close
+        if (this.modal) {
+            this.modal.addEventListener('click', (e) => {
+                if (e.target === this.modal) {
+                    this.hideModal();
+                }
+            });
+        }
+        
+        // Contact button handlers
+        if (this.contactBtn) {
+            this.contactBtn.addEventListener('click', () => this.showModal());
+        }
+        
+        if (this.contactBtnMobile) {
+            this.contactBtnMobile.addEventListener('click', () => this.showModal());
+        }
+        
+        if (this.bookConsultationBtn) {
+            this.bookConsultationBtn.addEventListener('click', () => this.showModal());
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.modal && !this.modal.classList.contains('hidden')) {
+                this.hideModal();
+            }
+        });
+    }
+    
+    showModal() {
+        if (this.modal) {
+            this.modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    hideModal() {
+        if (this.modal) {
+            this.modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize hero slider first (critical)
@@ -216,6 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize image preview modal
     const imageModal = new ImagePreviewModal();
+    
+    // Initialize contact modal
+    const contactModal = new ContactModal();
     
     // Delay plant loading to prioritize hero section
     setTimeout(() => {

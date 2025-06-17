@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://ritwikanursery.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ritwikanursery.com/images/hero/ChatGPT Image Jun 9, 2025, 09_10_51 PM.webp</image:loc>
+      <image:title>Best Nursery in Contai - Ritwika Nursery</image:title>
+      <image:caption>Premium plant nursery in Contai, Purba Medinipur</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://ritwikanursery.com/about.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Indoor Plants Page -->
+  <url>
+    <loc>https://ritwikanursery.com/indoor-plants.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ritwikanursery.com/images/indoor-plants/1.jpg</image:loc>
+      <image:title>Indoor Plants in Contai</image:title>
+      <image:caption>Premium indoor plants from best nursery in Contai</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Outdoor Plants Page -->
+  <url>
+    <loc>https://ritwikanursery.com/outdoor-plants.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ritwikanursery.com/images/outdoor-plants/1.jpg</image:loc>
+      <image:title>Outdoor Plants in Contai</image:title>
+      <image:caption>Premium outdoor plants from best nursery in Purba Medinipur</image:caption>
+    </image:image>
+  </url>
+  
+</urlset> 
