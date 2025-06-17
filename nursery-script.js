@@ -1,5 +1,29 @@
 // Nursery Website JavaScript
 
+// Smooth Scrolling for Navigation Links
+function initSmoothScrolling() {
+    // Add smooth scrolling to all anchor links that start with #
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Get the height of the fixed navbar
+                const navHeight = document.querySelector('nav').offsetHeight || 0;
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
 
 // Hero Slider Functionality with Optimized Loading
 class HeroSlider {
@@ -271,6 +295,9 @@ class ContactModal {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize smooth scrolling
+    initSmoothScrolling();
+    
     // Initialize hero slider first (critical)
     const heroSlider = new HeroSlider();
     
