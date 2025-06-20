@@ -1,0 +1,72 @@
+{
+  "business_name": "Ritwika Nursery",
+  "business_type": "Plant Nursery",
+  "description": "🏆 #1 Best Nursery in Contai | 20+ Years Experience | Premium Plants & Expert Guidance | Serving Contai, Digha, Purba Medinipur | 5000+ Happy Customers | Best Prices Guaranteed",
+  "keywords": [
+    "best nursery in contai",
+    "best nursery contai",
+    "#1 nursery contai",
+    "top nursery contai",
+    "plant nursery contai",
+    "nursery near digha",
+    "purba medinipur nursery",
+    "ritwika nursery",
+    "contai plant shop",
+    "best plant nursery purba medinipur"
+  ],
+  "address": {
+    "street": "Saikeswar, Alokhiyapur",
+    "city": "Contai",
+    "state": "Purba Medinipur",
+    "postal_code": "720401",
+    "country": "India"
+  },
+  "phone": ["+916294248254", "+916296180262"],
+  "email": "ritwikanursury@gmail.com",
+  "website": "https://ritwikanursery.com",
+  "categories": [
+    "Plant nursery",
+    "Garden center",
+    "Landscaping supply store",
+    "Tree service",
+    "Gardening supply store"
+  ],
+  "services": [
+    "Fruit Plants",
+    "Flowering Plants", 
+    "Show Plants",
+    "Roadside Plants",
+    "Garden Landscaping",
+    "Plant Consultation",
+    "Tree Planting Service",
+    "Garden Design"
+  ],
+  "hours": {
+    "monday": "8:00 AM – 6:00 PM",
+    "tuesday": "8:00 AM – 6:00 PM", 
+    "wednesday": "8:00 AM – 6:00 PM",
+    "thursday": "8:00 AM – 6:00 PM",
+    "friday": "8:00 AM – 6:00 PM", 
+    "saturday": "8:00 AM – 6:00 PM",
+    "sunday": "8:00 AM – 6:00 PM"
+  },
+  "social_profiles": {
+    "facebook": "https://www.facebook.com/share/16Ym4773Jt/?mibextid=qi2Omg",
+    "whatsapp": "https://wa.me/916296180262"
+  },
+  "photos": [
+    "images/hero/ChatGPT Image Jun 9, 2025, 09_10_51 PM.webp",
+    "images/indoor-plants/",
+    "images/outdoor-plants/"
+  ],
+  "owner": "Bhabatosh Giri",
+  "established": "2003",
+  "specialties": [
+    "Bengal Climate Plants",
+    "Mango Trees",
+    "Jackfruit Plants", 
+    "Seasonal Flowering Plants",
+    "Indoor Air Purifying Plants",
+    "Roadside Landscaping Plants"
+  ]
+} 
