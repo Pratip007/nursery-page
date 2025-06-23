@@ -1,0 +1,22 @@
+{
+    "name": "Ritwika Nursery - Best Nursery in Contai",
+    "short_name": "Ritwika Nursery",
+    "description": "The best nursery in Contai, Purba Medinipur. Premium plants and expert guidance since 2003.",
+    "icons": [
+        {
+            "src": "images/hero/fabicon/image.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/hero/fabicon/image.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#4A6441",
+    "background_color": "#F7F5F0",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+} 
